@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./styling/form-styling.css">
+</head>
+<body>
+
+<form id="form" action="" method="POST" onsubmit="return form_validation()">
+
+    <fieldset>
+      <h2 class="title">Create your account</h2>
+      <input type="text" name="email" placeholder="Email" />
+      <input type="password" name="pass" placeholder="Password" />
+      <input type="password" name="cpass" placeholder="Confirm Password" />
+      <p class="err_msg"></p>
+      <input type="reset" name="reset" value="Reset" class="reset action-button">
+      <input type="submit" name="next" class="next action-button" value="Next" />
+    </fieldset>
+  
+  </form>
+  <script src="./script.js"></script>
+
+
+</body>
+</html>
