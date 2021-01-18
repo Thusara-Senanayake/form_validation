@@ -31,6 +31,10 @@ function form_validation(){
 		return false
 
 	}
+	else if(cpass == null || cpass === ""){
+		err_msg.innerHTML = 'Confirm your password';
+		return false;
+	}
 	else if (cpass !== pass){
 		err_msg.innerHTML = 'Password miss match';
 		return false
