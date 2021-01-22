@@ -1,0 +1,172 @@
+/*custom font*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*basic reset*/
+* { box-sizing:border-box; }
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;	
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(rgba(243, 108, 243, 0.6), rgba(75, 211, 221, 0.6));
+}
+
+body {
+	font-family:Roboto, verdana ;
+}
+
+.container 		{ 
+	font-family:'Roboto';
+	width:60%; 
+	margin:30px auto 0; 
+	display:block; 
+	background:#FFF;
+	padding:10px 50px 50px;
+  }
+/*title styles*/
+
+h2 	 { 
+	text-align:center; 
+	margin-bottom:30px; 
+  }
+  h2 small { 
+	font-weight:0;
+	color:rgba(136, 136, 136, 0.699); 
+	display:block; 
+  }
+
+/*form styles*/
+.group 			  { 
+	position:relative; 
+	margin-bottom:30px; 
+  }
+
+  
+/*inputs*/
+input 				{
+	font-size:18px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width:300px;
+	border:none;
+	border-bottom:1px solid #757575;
+  }
+  input:focus{
+	   outline:none; 
+	}
+/* dynamic messages	*/
+
+.err_msg{
+	color:red;
+	padding:10px 0px;
+	font-size: small;
+
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+  }
+  /* LABEL ======================================= */
+label 				 {
+	color:#999; 
+	font-size:18px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top:10px;
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+  }
+/* HIGHLIGHTER ================================== */
+.highlight {
+	position:absolute;
+	height:60%; 
+	width:100px; 
+	top:25%; 
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+  }
+/* active state */
+input:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+  }
+  
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+	top:-20px;
+	font-size:14px;
+	color:#5264AE;
+  }
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* ANIMATIONS*/
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+/*buttons*/
+#form .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 20px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#form .action-button:hover, #form .action-button:active {
+	border:1px #27AE60 solid;
+	
+	
+}
+#form .action-button:focus{
+	outline:none;
+}
+
+
+/* 
+not mobile responsive
+isuues w/ email lable and its i/p
+*/
