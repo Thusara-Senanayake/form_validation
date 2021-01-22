@@ -3,7 +3,11 @@ $(document).ready(() => {
         e.preventDefault();
 
         if($("#email").val() === "" || null){
-            console.log("error")
+            console.log("empty email field ")
+        }
+        else{
+        $("#form").submit()
+       
         }
     });
 });
