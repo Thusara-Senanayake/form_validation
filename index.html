@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Thusara Senanayake">
+  <title>Form</title>
+  <link rel="stylesheet" href="./styling/form-styling.css">
+</head>
+
+<body>
+
+  <form id="form" action="./" method="POST">
+
+    <fieldset>
+      <h2 class="title">Create your account</h2>
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="pass" name="pass" placeholder="Password" required />
+      <input type="password" id="cpass" name="cpass" placeholder="Confirm Password" required />
+      <p class="err_msg"></p>
+      <input type="reset" name="reset" value="Reset" class="reset action-button">
+      <input type="submit" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+  </form>
+  <script src="./jquery-3.5.1.min.js"></script>
+  <script src="./jquery.validate.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
